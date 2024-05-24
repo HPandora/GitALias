@@ -10,7 +10,6 @@
 	ci = commit
 	ciam = !git add . && git commit -m 
 	co = checkout
-	poule = pull
 	god = log --graph --oneline --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	deleteRemoteBranch = push origin --delete
 	pullRemoteBranch = fetch origin
@@ -29,5 +28,6 @@
 	wtlock = worktree lock
 	wtunlock = worktree unlock
 	test = !sh -c 'dir'
+	poule = "!git pull && powershell -Command \"(New-Object Media.SoundPlayer 'C:\\Users\\hollevif\\Music\\poule.wav').PlaySync();\" && echo 'CotCOTcoDEEEK!'"
 [filter "lfs"]
 	usejgitbuiltin = true
