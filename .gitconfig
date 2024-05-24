@@ -1,9 +1,11 @@
 [alias]
 	alias = config --get-regexp ^alias
+	merge = merge --no-ff
 	current-branch = git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
 	upstream = push --set-upstream origin HEAD 
 	st = status
 	br = branch
+	yolo = push --force-with-lease
 	br-remotes = for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)    %(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authordate refs/remotes
 	ci = commit
 	ciam = !git add . && git commit -m 
@@ -16,6 +18,16 @@
 	stashm = stash -m
 	stashl = stash list
 	stashp = stash pop
+	wt = worktree
+	wtadd = worktree add
+	wtaddlock = worktree add --lock 
+	wtaddlockbranch = worktree add --lock -b 
+	wtl = worktree list -v
+	wtmv = worktree move 
+	wtrp = worktree repair
+	wtrm = worktree remove
+	wtlock = worktree lock
+	wtunlock = worktree unlock
 	test = !sh -c 'dir'
 [filter "lfs"]
 	usejgitbuiltin = true
