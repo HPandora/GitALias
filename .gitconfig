@@ -6,7 +6,7 @@
 	st = status
 	br = branch
 	yolo = push --force-with-lease
-	br-remotes = for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)    %(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authordate refs/remotes
+	br-remotes = !git fetch --prune && git for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)    %(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authordate refs/remotes
 	ci = commit
 	ciam = !git add . && git commit -m 
 	co = checkout
@@ -28,6 +28,6 @@
 	wtlock = worktree lock
 	wtunlock = worktree unlock
 	test = !sh -c 'dir'
-	poule = "!git pull && powershell -Command \"(New-Object Media.SoundPlayer 'C:\\Users\\hollevif\\Music\\poule.wav').PlaySync();\" && echo 'CotCOTcoDEEEK!'"
+	poule = "!git pull && powershell -Command \"(New-Object Media.SoundPlayer 'C:\\Users\\hollevif\\Music\\poule.wav').PlaySync();\" && echo 'Cocote!'"
 [filter "lfs"]
 	usejgitbuiltin = true
