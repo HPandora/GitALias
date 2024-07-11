@@ -12,6 +12,7 @@
 	ciam = !git add . && git commit -m 
 	co = checkout
 	god = log --graph --oneline --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	deus = log --graph --oneline --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset): %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)%n''    %C(bold cyan)Date Fusion: %cD%C(reset) %C(bold green)(%cr)%C(reset)%n''    %C(cyan)Date Creation: %as%C(reset) %C(bold green)(%ar)%C(reset)%n'%n'    -------------------%n''    ' --all
 	deleteRemoteBranch = push origin --delete
 	pullRemoteBranch = fetch origin
 	stsh = stash
