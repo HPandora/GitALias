@@ -20,6 +20,7 @@
 	stashm = stash -m
 	stashl = stash list
 	stashp = stash pop
+ stashdiff = difftool stash@{0}
 	wt = worktree
 	wtadd = worktree add
 	wtaddlock = worktree add --lock 
