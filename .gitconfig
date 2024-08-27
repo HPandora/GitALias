@@ -11,6 +11,7 @@
 	unci = reset --soft HEAD^
 	ciam = !git add . && git commit -m 
 	co = checkout
+	prev = checkout -
 	difftool = difftool --tool=vscode
 	god = log --graph --oneline --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	deus = log --graph --oneline --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset): %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)%n''    %C(bold cyan)Date Fusion: %cD%C(reset) %C(bold green)(%cr)%C(reset)%n''    %C(cyan)Date Creation: %as%C(reset) %C(bold green)(%ar)%C(reset)%n'%n'    -------------------%n''    ' --all
@@ -20,7 +21,7 @@
 	stashm = stash -m
 	stashl = stash list
 	stashp = stash pop
- stashdiff = difftool stash@{0}
+ 	stashdiff = difftool stash@{0}
 	wt = worktree
 	wtadd = worktree add
 	wtaddlock = worktree add --lock 
