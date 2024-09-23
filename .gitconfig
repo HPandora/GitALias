@@ -37,6 +37,7 @@
 	todoAdd = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh add \"$*\"'\""
 	todoList = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh list '\""
 	todoDone = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh done \"$*\"'\""
+	todoUndone = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh undone \"$*\"'\""
 	todoDrop = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh drop \"$*\"'\""
 	todoClear = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh clear \"$*\"'\""
 [filter "lfs"]
