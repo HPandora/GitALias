@@ -21,7 +21,7 @@
 	stashm = stash -m
 	stashl = stash list
 	stashp = stash pop
- 	stashdiff = difftool stash@{0}
+	stashdiff = difftool stash@{0}
 	wt = worktree
 	wtadd = worktree add
 	wtaddlock = worktree add --lock 
@@ -34,5 +34,10 @@
 	wtunlock = worktree unlock
 	test = !sh -c 'dir'
 	poule = "!git pull && powershell -Command \"(New-Object Media.SoundPlayer 'C:\\Users\\hollevif\\Music\\poule.wav').PlaySync();\" && echo 'Cocote!'"
+	todoAdd = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh add \"$*\"'\""
+	todoList = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh list '\""
+	todoDone = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh done \"$*\"'\""
+	todoDrop = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh drop \"$*\"'\""
+	todoClear = "!powershell -NoProfile -ExecutionPolicy Bypass -Command \"bash -c 'C:/DEV/DEVTOOLS/gitTask/todo.sh clear \"$*\"'\""
 [filter "lfs"]
 	usejgitbuiltin = true
