@@ -30,6 +30,20 @@ marquer_effectuee() {
   echo "Tâche #$ligne_num marquée comme effectuée."
 }
 
+# Fonction pour marquer une tâche comme non effectuée par numéro (undone)
+marquer_non_effectuee() {
+  ligne_num=$1
+  # Vérifier si l'on est sur un système comme macOS qui requiert un argument avec -i
+  if sed --version >/dev/null 2>&1; then
+    # Utiliser sed avec l'option -i pour Linux
+    sed -i "${ligne_num}s/\[x\]/[ ]/" "$TODO_FILE"
+  else
+    # Utiliser sed avec l'option -i '' pour macOS
+    sed -i "" "${ligne_num}s/\[x\]/[ ]/" "$TODO_FILE"
+  fi
+  echo "Tâche #$ligne_num décoché !!"
+}
+
 # Fonction pour supprimer une tâche par numéro
 supprimer_tache() {
   ligne_num=$1
@@ -52,7 +66,8 @@ case "$1" in
   list) afficher_taches ;;
   add) shift; ajouter_tache "$@" ;;
   done) marquer_effectuee "$2" ;;
+  undone) marquer_non_effectuee "$2" ;;
   drop) supprimer_tache "$2" ;;
   clear) supprimer_toutes_les_taches ;;
-  *) echo "Usage: $0 {list|add|done|drop|clear} [tâche|numéro]"; exit 1 ;;
+  *) echo "Usage: $0 {list|add|done|undone|drop|clear} [tâche|numéro]"; exit 1 ;;
 esac
